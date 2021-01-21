@@ -1,0 +1,588 @@
+[{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_0",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 0
+},{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_1",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 1
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_2",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 2
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_3",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 3
+},{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_4",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 4
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_5",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 5
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_6",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 6
+},{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_7",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 7
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_8",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 8
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_9",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 9
+},{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_10",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 10
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_11",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 11
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_12",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 12
+},{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_13",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 13
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_14",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 14
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_15",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 15
+},{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_16",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 16
+},
+{
+    "name": "GSA_RF_n100_dmy_dow_grps_shift_17",
+    "model": {
+        "module": "sklearn.ensemble",
+        "model": "RandomForestRegressor",
+        "kwargs": {
+            "random_state":  0,
+            "n_estimators": 100
+        }
+    },
+    "inputs": [
+        {
+            "filename": "./data/US_2017_2019_daily_gsa.csv",
+            "include": ["Date", "Total GSA"],
+            "groupby": "Date", 
+            "join_on": "Date"
+        }, 
+        {
+            "filename": "./data/2017-Current OMD TV Spot Log-AP.csv",
+            "filter": [{"by": "outlier", "op": "eq", "val": "No"}],
+            "include": ["calendar_spotdate", "month", "year", "calendar_dow", "product", "grps"],
+            "dummies": ["month", "year", "calendar_dow"],
+            "split": [{"metric": "grps", "by": "product"}],
+            "groupby": "calendar_spotdate", 
+            "join_on": "calendar_spotdate"
+        }
+    ],
+    "polynomial_features": [["year", "grps"]],
+    "drop_after_poly": ["year", "grps"],
+    "test_size": 0.2,
+    "target": "Total GSA",
+    "shift_target_by": 17
+}]
